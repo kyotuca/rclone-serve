@@ -5,4 +5,4 @@ ENV FOLDER=/
 
 EXPOSE 9000
 
-ENTRYPOINT rclone serve s3 ${REMOTE_NAME}:${FOLDER} --addr :9000 --vfs-cache-mode full
+ENTRYPOINT rclone serve s3 ${REMOTE_NAME}:${FOLDER} --addr 0.0.0.0:9000 --vfs-cache-mode full -vv
