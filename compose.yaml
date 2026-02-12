@@ -1,0 +1,10 @@
+services:
+  rclone-serve:
+    image: ghcr.io/kyotuca/rclone-serve:latest
+    ports: 
+      - 9000:9000
+    environment:
+      REMOTE_NAME: myremote
+      FOLDER: /
+    volumes:
+      - ./rclone.conf:/config/rclone/rclone.conf:ro
