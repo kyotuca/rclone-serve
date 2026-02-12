@@ -2,8 +2,7 @@ FROM docker.io/rclone/rclone
 
 ENV REMOTE_NAME=myremote
 ENV FOLDER=/
-ENV PORT=9000
 
-EXPOSE $PORT
+EXPOSE 9000
 
-ENTRYPOINT serve s3 ${REMOTE_NAME}:${FOLDER} --addr :${PORT} --vfs-cache-mode full
+ENTRYPOINT serve s3 ${REMOTE_NAME}:${FOLDER} --addr :9000 --vfs-cache-mode full
