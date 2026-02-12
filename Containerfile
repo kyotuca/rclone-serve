@@ -1,4 +1,4 @@
-FROM rclone/rclone
+FROM docker.io/rclone/rclone
 
 ENV REMOTE_NAME=myremote
 ENV FOLDER=/
