@@ -10,5 +10,6 @@ EXPOSE 9000
 ENTRYPOINT rclone serve s3 ${REMOTE_NAME}:${FOLDER} \
     --addr 0.0.0.0:9000 \
     --vfs-cache-mode full \
+    --vfs-write-back 0s \
     -vv \
     --auth-key "${ACCESS_KEY_ID},${SECRET_ACCESS_KEY}"
